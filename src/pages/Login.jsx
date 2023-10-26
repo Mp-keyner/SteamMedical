@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/Login.css";
+import BtnGoogle from "../components/BtnGoogle";
 
 const Login = ({ setShowNav }) => {
   const [name, setName] = useState('')
@@ -32,6 +33,7 @@ const Login = ({ setShowNav }) => {
           <button onClick={() => console.log(localStorage.getItem("User"))}>
             Ver
           </button>
+          <BtnGoogle/>
           {
             localStorage.getItem("User") ? LocalUser.name : 'No Existe'
           }
